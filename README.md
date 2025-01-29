@@ -46,50 +46,113 @@ To ensure the reliability and functionality of the SwagLabs application through 
 
 ## **Project Structure**
 ```
-📦WEB-UI-Automation-SwagLabs
- ┣ 📂AutomationScripts
- ┃ ┣ 📂src
- ┃ ┃ ┣ 📂main
- ┃ ┃ ┃ ┣ 📂java
- ┃ ┃ ┃ ┗ 📂resources
- ┃ ┃ ┃ ┃ ┣ 📂archetype-resources
- ┃ ┃ ┃ ┃ ┣ 📂META-INF
- ┃ ┃ ┃ ┃ ┗ 📜chromedriver.exe
- ┃ ┃ ┗ 📂test
- ┃ ┃ ┃ ┣ 📂java
- ┃ ┃ ┃ ┃ ┣ 📂pages
- ┃ ┃ ┃ ┃ ┃ ┣ 📜AddPage.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜CartPage.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜CheckoutPage.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜LoginPage.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜LogoutPage.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜ProductPage.java
- ┃ ┃ ┃ ┃ ┃ ┗ 📜RemovePage.java
- ┃ ┃ ┃ ┃ ┣ 📂runner
- ┃ ┃ ┃ ┃ ┃ ┗ 📜TestRunner.java
- ┃ ┃ ┃ ┃ ┣ 📂steps
- ┃ ┃ ┃ ┃ ┃ ┣ 📜AddStep.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜CartStep.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜CheckoutStep.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜LoginStep.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜LogoutStep.java
- ┃ ┃ ┃ ┃ ┃ ┗ 📜RemoveStep.java
- ┃ ┃ ┃ ┃ ┗ 📂utils
- ┃ ┃ ┃ ┃ ┃ ┣ 📜DriverFactory.java
- ┃ ┃ ┃ ┃ ┃ ┗ 📜NavigationHelper.java
- ┃ ┃ ┃ ┗ 📂resources
- ┃ ┃ ┃ ┃ ┗ 📂features
- ┃ ┃ ┃ ┃ ┃ ┣ 📜Add.feature
- ┃ ┃ ┃ ┃ ┃ ┣ 📜Cart.feature
- ┃ ┃ ┃ ┃ ┃ ┣ 📜Checkout.feature
- ┃ ┃ ┃ ┃ ┃ ┣ 📜Login.feature
- ┃ ┃ ┃ ┃ ┃ ┣ 📜Logout.feature
- ┃ ┃ ┃ ┃ ┃ ┗ 📜Remove.feature
- ┃ ┗ 📜pom.xml
- ┣ 📂TestCase
- ┃ ┗ 📜Test Case Swag Labs.xlsm
- ┣ 📂TestReport
- ┃ ┗ 📜Test Report and Documentation Swag Labs Test.pdf
+┣ 📂.github
+ ┃ ┗ 📂workflows
+ ┃ ┃ ┗ 📜main.yml
+ ┣ 📂.idea
+ ┃ ┣ 📜.gitignore
+ ┃ ┣ 📜compiler.xml
+ ┃ ┣ 📜encodings.xml
+ ┃ ┣ 📜jarRepositories.xml
+ ┃ ┣ 📜misc.xml
+ ┃ ┗ 📜workspace.xml
+ ┣ 📂src
+ ┃ ┣ 📂main
+ ┃ ┃ ┣ 📂java
+ ┃ ┃ ┗ 📂resources
+ ┃ ┃ ┃ ┣ 📂archetype-resources
+ ┃ ┃ ┃ ┃ ┣ 📂src
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂main
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜App.java
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂test
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AppTest.java
+ ┃ ┃ ┃ ┃ ┗ 📜pom.xml
+ ┃ ┃ ┃ ┣ 📂META-INF
+ ┃ ┃ ┃ ┃ ┗ 📂maven
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜archetype.xml
+ ┃ ┃ ┃ ┗ 📜chromedriver.exe
+ ┃ ┗ 📂test
+ ┃ ┃ ┣ 📂java
+ ┃ ┃ ┃ ┣ 📂pages
+ ┃ ┃ ┃ ┃ ┣ 📜AddPage.java
+ ┃ ┃ ┃ ┃ ┣ 📜CartPage.java
+ ┃ ┃ ┃ ┃ ┣ 📜CheckoutPage.java
+ ┃ ┃ ┃ ┃ ┣ 📜LoginPage.java
+ ┃ ┃ ┃ ┃ ┣ 📜LogoutPage.java
+ ┃ ┃ ┃ ┃ ┣ 📜ProductPage.java
+ ┃ ┃ ┃ ┃ ┗ 📜RemovePage.java
+ ┃ ┃ ┃ ┣ 📂runner
+ ┃ ┃ ┃ ┃ ┗ 📜TestRunner.java
+ ┃ ┃ ┃ ┣ 📂steps
+ ┃ ┃ ┃ ┃ ┣ 📜AddStep.java
+ ┃ ┃ ┃ ┃ ┣ 📜CartStep.java
+ ┃ ┃ ┃ ┃ ┣ 📜CheckoutStep.java
+ ┃ ┃ ┃ ┃ ┣ 📜LoginStep.java
+ ┃ ┃ ┃ ┃ ┣ 📜LogoutStep.java
+ ┃ ┃ ┃ ┃ ┗ 📜RemoveStep.java
+ ┃ ┃ ┃ ┗ 📂utils
+ ┃ ┃ ┃ ┃ ┣ 📜DriverFactory.java
+ ┃ ┃ ┃ ┃ ┗ 📜NavigationHelper.java
+ ┃ ┃ ┗ 📂resources
+ ┃ ┃ ┃ ┗ 📂features
+ ┃ ┃ ┃ ┃ ┣ 📜Add.feature
+ ┃ ┃ ┃ ┃ ┣ 📜Cart.feature
+ ┃ ┃ ┃ ┃ ┣ 📜Checkout.feature
+ ┃ ┃ ┃ ┃ ┣ 📜Login.feature
+ ┃ ┃ ┃ ┃ ┣ 📜Logout.feature
+ ┃ ┃ ┃ ┃ ┗ 📜Remove.feature
+ ┣ 📂target
+ ┃ ┣ 📂classes
+ ┃ ┃ ┣ 📂archetype-resources
+ ┃ ┃ ┃ ┣ 📂src
+ ┃ ┃ ┃ ┃ ┣ 📂main
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜App.java
+ ┃ ┃ ┃ ┃ ┗ 📂test
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AppTest.java
+ ┃ ┃ ┃ ┗ 📜pom.xml
+ ┃ ┃ ┣ 📂META-INF
+ ┃ ┃ ┃ ┗ 📂maven
+ ┃ ┃ ┃ ┃ ┗ 📜archetype.xml
+ ┃ ┃ ┗ 📜chromedriver.exe
+ ┃ ┣ 📂generated-sources
+ ┃ ┃ ┗ 📂annotations
+ ┃ ┣ 📂generated-test-sources
+ ┃ ┃ ┗ 📂test-annotations
+ ┃ ┣ 📂test-classes
+ ┃ ┃ ┣ 📂features
+ ┃ ┃ ┃ ┣ 📜Add.feature
+ ┃ ┃ ┃ ┣ 📜Cart.feature
+ ┃ ┃ ┃ ┣ 📜Checkout.feature
+ ┃ ┃ ┃ ┣ 📜Login.feature
+ ┃ ┃ ┃ ┣ 📜Logout.feature
+ ┃ ┃ ┃ ┗ 📜Remove.feature
+ ┃ ┃ ┣ 📂pages
+ ┃ ┃ ┃ ┣ 📜AddPage.class
+ ┃ ┃ ┃ ┣ 📜CartPage.class
+ ┃ ┃ ┃ ┣ 📜CheckoutPage.class
+ ┃ ┃ ┃ ┣ 📜LoginPage.class
+ ┃ ┃ ┃ ┣ 📜LogoutPage.class
+ ┃ ┃ ┃ ┣ 📜ProductPage.class
+ ┃ ┃ ┃ ┗ 📜RemovePage.class
+ ┃ ┃ ┣ 📂runner
+ ┃ ┃ ┃ ┗ 📜TestRunner.class
+ ┃ ┃ ┣ 📂steps
+ ┃ ┃ ┃ ┣ 📜AddStep.class
+ ┃ ┃ ┃ ┣ 📜CartStep.class
+ ┃ ┃ ┃ ┣ 📜CheckoutStep.class
+ ┃ ┃ ┃ ┣ 📜LoginStep.class
+ ┃ ┃ ┃ ┣ 📜LogoutStep.class
+ ┃ ┃ ┃ ┗ 📜RemoveStep.class
+ ┃ ┃ ┗ 📂utils
+ ┃ ┃ ┃ ┣ 📜DriverFactory.class
+ ┃ ┃ ┃ ┗ 📜NavigationHelper.class
+ ┃ ┗ 📜cucumber-report.html
+ ┣ 📜.gitignore
+ ┣ 📜pom.xml
  ┗ 📜README.md
 ```
 ---
