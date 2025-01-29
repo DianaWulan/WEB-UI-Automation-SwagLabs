@@ -1,7 +1,7 @@
 @All
 Feature: Login
 
-  @positive @login1
+  @positive @login
   Scenario: Success login with valid username and password
     Given user enter the swag labs in browser
     When user in login page

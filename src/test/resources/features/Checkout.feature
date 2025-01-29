@@ -94,7 +94,7 @@ Feature: Checkout
     When user clik continue button
     Then user get error massage checkout
 
-  @positive @checkout1 @cancel
+  @positive @checkout @cancel
   Scenario: User click Cancel button
     Given user to checkout page
     When user clik cancel button
@@ -102,7 +102,7 @@ Feature: Checkout
 
 
     #Overview Page
-  @positive @checkout1 @overview
+  @positive @checkout @overview
   Scenario: User click Cancel button
     Given user to checkout overview page
     When user clik cancel button in checkout overview page
