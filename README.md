@@ -46,7 +46,7 @@ To ensure the reliability and functionality of the SwagLabs application through 
 
 ## **Project Structure**
 ```
-┣ 📂.github
+ ┣ 📂.github
  ┃ ┗ 📂workflows
  ┃ ┃ ┗ 📜main.yml
  ┣ 📂.idea
